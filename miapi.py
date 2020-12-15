@@ -1,12 +1,15 @@
 import streamlit as st
-
-from tools.getdata import data
+from tools.getdata import data, listadodemarcas, marca_seleccionada
 
 
 st.dataframe(data)
 
-#guardar marca como variable
+#selectbox para elegir marca
 
-marca = selectbox no se que´é
+marca = st.selectbox(
+    'Elige una marca:',
+     listadodemarcas(data))
+st.write(('Has seleccionado la marca:', marca))
 
-dataframe  = llamar a la función(marca)
+marca_elegida = marca_seleccionada(marca)
+st.dataframe(marca_elegida)

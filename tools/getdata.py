@@ -20,7 +20,17 @@ res = conn.execute(query)
 data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
 
 
-#Una función que de el dataframe te de solamente columna Marcas sin repetir
-def funcionquehacequery(marca)
-    query = "SELECT * FROM Dermocosmética WHERE {marca}"
-    de
+def listadodemarcas(df):
+    listado_marcas = []
+    marcas = df["Marca"].tolist()
+    marcas
+    listado_marcas_set = set(marcas)
+    listado_marcas = list(listado_marcas_set) 
+    return listado_marcas
+
+def marca_seleccionada(marca):
+    query = "SELECT * FROM Dermocosmética WHERE Marca"
+    res = conn.execute(query)
+    data = pd.DataFrame(res, columns=[field['marca'] for field in inspector.get_columns('marca')])
+    return data
+
