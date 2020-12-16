@@ -31,8 +31,7 @@ precio = st.selectbox(
     'Elige un precio (en €):',
      listadodeprecios(data))
 'Estos son los productos de la marca', marca, 'con un precio inferior a', precio,'€ ordenados de menor a mayor precio:'
-#precio_elegido = precio_seleccionado (precio)
-#st.dataframe(precio_elegido)
+
 
 marca_precio_elegido = marca_precio (marca, precio)
 st.dataframe(marca_precio_elegido)
@@ -95,7 +94,9 @@ st.dataframe(ojos_elegida)
 cara_elegida = cara_seleccionada(cara)
 st.dataframe(cara_elegida)
 
+
 'Tu producto corporal elegido es:', corporal
 
 corporal_elegida = corporal_seleccionada(corporal)
 st.dataframe(corporal_elegida)
+
