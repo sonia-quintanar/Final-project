@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
-from tools.getdata import data, listadodemarcas, marca_seleccionada, listadodeprecios, precio_seleccionado, marca_precio, data_ojos
+from tools.getdata import data, listadodemarcas, marca_seleccionada, listadodeprecios, precio_seleccionado, marca_precio, data_ojos, listadodeojos, ojos_seleccionada, data_cara, listadodecara, cara_seleccionada, data_corporal, listadodecorporal, corporal_seleccionada
+
 st.markdown("<h1 style='text-align: center; color: black;'>¿Cómo encontrar mi producto con el precio más bajo?</h1>", unsafe_allow_html=True)
 
 image = Image.open('images/imagen_primor.jpg')
@@ -37,7 +38,7 @@ marca_precio_elegido = marca_precio (marca, precio)
 st.dataframe(marca_precio_elegido)
 
 
-st.markdown("<h1 style='text-align: center; color: black;'>¿Mi Carrito de compra?</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Mi pedido</h1>", unsafe_allow_html=True)
 # Ojos:
 st.write(
 """
@@ -46,3 +47,55 @@ Los productos para mi ojos son:
 )
 
 st.dataframe(data_ojos)
+
+ojos = st.selectbox(
+    'Elige un producto:',
+     listadodeojos(data_ojos))
+
+
+# Facial:
+st.write(
+"""
+Los productos para mi cara son:
+"""
+)
+
+st.dataframe(data_cara)
+
+cara = st.selectbox(
+    'Elige un producto:',
+     listadodecara(data_cara))
+
+
+# Corporal:
+st.write(
+"""
+Los productos corporales son:
+"""
+)
+
+st.dataframe(data_corporal)
+
+corporal = st.selectbox(
+    'Elige un producto:',
+     listadodecorporal(data_corporal))
+
+# Carrito de compra:
+
+st.markdown("<h1 style='text-align: center; color: black;'>Carrito de compra</h1>", unsafe_allow_html=True)
+
+'Tu producto de ojos elegido es:', ojos
+
+ojos_elegida = ojos_seleccionada(ojos)
+st.dataframe(ojos_elegida)
+
+
+'Tu producto de cara elegido es:', cara
+
+cara_elegida = cara_seleccionada(cara)
+st.dataframe(cara_elegida)
+
+'Tu producto corporal elegido es:', corporal
+
+corporal_elegida = corporal_seleccionada(corporal)
+st.dataframe(corporal_elegida)

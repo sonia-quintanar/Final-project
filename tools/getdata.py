@@ -38,9 +38,7 @@ def marca_seleccionada(marca):
 # Precios:
 def listadodeprecios(df):
     precios = ["5","10","20","30","40","50"]
-    precios_set = set(precios)
-    listado_precios = list(precios_set) 
-    return listado_precios
+    return precios
 
 
 def precio_seleccionado(precio):
@@ -63,4 +61,48 @@ query = f"SELECT * FROM Dermocosmética WHERE Nombre LIKE '%%{palabra}%%' order 
 res = conn.execute(query)
 data_ojos = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
 
+def listadodeojos(df):
+    ojos= data_ojos["Nombre"].tolist()
+    return ojos
 
+def ojos_seleccionada(ojos):
+    query = f"SELECT * FROM Dermocosmética WHERE Nombre='{ojos}';"
+    res = conn.execute(query)
+    data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
+    return data
+
+
+# Cara:
+
+palabra = "Facial"
+query = f"SELECT * FROM Dermocosmética WHERE Nombre LIKE '%%{palabra}%%' order by Precio DESC;"
+res = conn.execute(query)
+data_cara = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
+
+def listadodecara(df):
+    cara= data_cara["Nombre"].tolist()
+    return cara
+
+def cara_seleccionada(cara):
+    query = f"SELECT * FROM Dermocosmética WHERE Nombre='{cara}';"
+    res = conn.execute(query)
+    data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
+    return data
+
+
+# Corporal:
+
+palabra = "Corporal"
+query = f"SELECT * FROM Dermocosmética WHERE Nombre LIKE '%%{palabra}%%' order by Precio DESC;"
+res = conn.execute(query)
+data_corporal = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
+
+def listadodecorporal(df):
+    corporal= data_corporal["Nombre"].tolist()
+    return corporal
+
+def corporal_seleccionada(corporal):
+    query = f"SELECT * FROM Dermocosmética WHERE Nombre='{corporal}';"
+    res = conn.execute(query)
+    data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
+    return data
