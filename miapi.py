@@ -1,4 +1,6 @@
 import streamlit as st
+from PIL import Image
+import plotly.graph_objs as go
 from tools.getdata import data, listadodemarcas, marca_seleccionada
 
 st.markdown("<h1 style='text-align: center; color: black;'>¿Cómo encontrar mi producto con el precio más bajo?</h1>", unsafe_allow_html=True)
