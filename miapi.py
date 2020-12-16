@@ -7,7 +7,7 @@ image = Image.open('images/imagen_primor.jpg')
 st.image (image,use_column_width=True)
 st.write(
 """
-En este proyecto visualizamos los productos de la sección de Dermocosmética dentro de Parafarmcia de la página de [Primor.](https://www.primor.eu/66-dermocosmetica)
+En este proyecto extraemos con Web Scraping los productos de la sección de Dermocosmética dentro de Parafarmcia de la página de [Primor.](https://www.primor.eu/66-dermocosmetica)
 """
 )
 
