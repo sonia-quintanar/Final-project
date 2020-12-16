@@ -28,9 +28,10 @@ def listadodemarcas(df):
     listado_marcas = list(listado_marcas_set) 
     return listado_marcas
 
-def marca_seleccionada(marca):
-    query = "SELECT * FROM Dermocosmética WHERE Marca"
+def marca_seleccionada(df):
+    query = f"SELECT * FROM Dermocosmética WHERE Marca={marca}"
     res = conn.execute(query)
-    data = pd.DataFrame(res, columns=[field['marca'] for field in inspector.get_columns('marca')])
+    data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Democosmética')])
     return data
 
+    #query = f"SELECT Marca FROM Dermocosmética WHERE Marca, Precio LIKE '%%{marca}%%' ORDER BY Precio

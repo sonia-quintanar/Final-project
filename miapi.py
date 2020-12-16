@@ -11,5 +11,6 @@ marca = st.selectbox(
      listadodemarcas(data))
 st.write(('Has seleccionado la marca:', marca))
 
+
 marca_elegida = marca_seleccionada(marca)
-st.dataframe(marca_elegida)
+st.dataframe(marca_seleccionada)
