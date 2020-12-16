@@ -29,32 +29,21 @@ def listadodemarcas(df):
     return listado_marcas
 
 def marca_seleccionada(marca):
-    query = f"SELECT * FROM Dermocosmética WHERE Marca={marca}"
+    query = f"SELECT * FROM Dermocosmética WHERE Marca='{marca}';"
     res = conn.execute(query)
     data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
     return data
 
 
-  
-
-
-
-
-
-
-
-
 # Precios
 def listadodeprecios(df):
-    listado_precios = []
-    precios = df["Precio"].tolist()
-    precios
-    listado_precios_set = set(precios)
-    listado_precios = list(listado_precios_set) 
+    precios = [5, 10, 20, 30, 40, 50]
+    precios_set = set(precios)
+    listado_precios = list(precios_set) 
     return listado_precios
 
-def precio_seleccionado(df):
-    query = f"SELECT * FROM Dermocosmética WHERE Precio > {precio}"
+def precio_seleccionado(precio):
+    query = f"SELECT * FROM Dermocosmética WHERE Precio < {precio};"
     res = conn.execute(query)
     data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
     return data

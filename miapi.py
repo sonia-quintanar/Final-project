@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from tools.getdata import data, listadodemarcas, marca_seleccionada
+from tools.getdata import data, listadodemarcas, marca_seleccionada, listadodeprecios, precio_seleccionado
 
 st.markdown("<h1 style='text-align: center; color: black;'>¿Cómo encontrar mi producto con el precio más bajo?</h1>", unsafe_allow_html=True)
 
@@ -23,15 +23,15 @@ st.write(('Has seleccionado la marca:', marca))
 
 
 marca_elegida = marca_seleccionada(marca)
-st.dataframe(marca_seleccionada)
+st.dataframe(marca_elegida)
 
 
-#selectbox para elegir precio < 15 €
+#selectbox para elegir precio < 30 €
 
 precio = st.selectbox(
     'Elige un precio:',
      listadodeprecios(data))
 st.write(('Tu precio elegido es:', precio))
 
-precio_elegido = precio_seleccionado(precio)
-st.dataframe(precio_seleccionado)
+precio_elegido = precio_seleccionado (precio)
+st.dataframe(precio_elegido)
