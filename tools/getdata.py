@@ -19,7 +19,7 @@ query = "SELECT * FROM Dermocosmética"
 res = conn.execute(query)
 data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
 
-# Marcas
+# Marcas:
 def listadodemarcas(df):
     listado_marcas = []
     marcas = df["Marca"].tolist()
@@ -35,7 +35,7 @@ def marca_seleccionada(marca):
     return data
 
 
-# Precios
+# Precios:
 def listadodeprecios(df):
     precios = ["5","10","20","30","40","50"]
     precios_set = set(precios)
@@ -55,4 +55,12 @@ def marca_precio(marca, precio):
     res = conn.execute(query)
     data = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
     return data
+
+# Ojos:
+
+palabra = "Ojos"
+query = f"SELECT * FROM Dermocosmética WHERE Nombre LIKE '%%{palabra}%%' order by Precio DESC;"
+res = conn.execute(query)
+data_ojos = pd.DataFrame(res, columns=[field['name'] for field in inspector.get_columns('Dermocosmética')])
+
 
