@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from tools.getdata import data, listadodemarcas, marca_seleccionada, listadodeprecios, precio_seleccionado
+from tools.getdata import data, listadodemarcas, marca_seleccionada, listadodeprecios, precio_seleccionado, marca_precio
 
 st.markdown("<h1 style='text-align: center; color: black;'>¿Cómo encontrar mi producto con el precio más bajo?</h1>", unsafe_allow_html=True)
 
@@ -14,24 +14,29 @@ En este proyecto extraemos con Web Scraping los productos de la sección de Derm
 
 st.dataframe(data)
 
-#selectbox para elegir marca
+#selectbox para elegir marca:
 
 marca = st.selectbox(
     'Elige una marca:',
      listadodemarcas(data))
-st.write(('Has seleccionado la marca:', marca))
+#st.write(('Estos son los productos de la marca:', marca))
+'Estos son los productos de la marca', marca,':'
 
 
 marca_elegida = marca_seleccionada(marca)
 st.dataframe(marca_elegida)
 
 
-#selectbox para elegir precio < 30 €
+#selectbox para elegir precio < X €:
 
 precio = st.selectbox(
-    'Elige un precio:',
+    'Elige un precio (en €):',
      listadodeprecios(data))
-st.write(('Tu precio elegido es:', precio))
+#st.write(('Aquí tienes tu búsqueda ordenada de menor a mayor precio:'))
+'Estos son los productos de la marca', marca, 'con un precio inferior a', precio,'€ ordenados de menor a mayor precio:'
+#precio_elegido = precio_seleccionado (precio)
+#st.dataframe(precio_elegido)
 
-precio_elegido = precio_seleccionado (precio)
-st.dataframe(precio_elegido)
+marca_precio_elegido = marca_precio (marca, precio)
+st.dataframe(marca_precio_elegido)
+
