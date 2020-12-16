@@ -1,6 +1,16 @@
 import streamlit as st
 from tools.getdata import data, listadodemarcas, marca_seleccionada
 
+st.markdown("<h1 style='text-align: center; color: black;'>¿Cómo encontrar mi producto con el precio más bajo?</h1>", unsafe_allow_html=True)
+
+image = Image.open('images/imagen_primor.jpg')
+st.image (image,use_column_width=True)
+st.write(
+"""
+En este proyecto visualizamos los productos de la sección de Dermocosmética dentro de Parafarmcia de la página de [Primor.](https://www.primor.eu/66-dermocosmetica)
+"""
+)
+
 
 st.dataframe(data)
 
