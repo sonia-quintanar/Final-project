@@ -99,7 +99,7 @@ corporal = st.selectbox(
 
 # Carrito de compra:
 
-st.markdown("<h1 style='text-align: center; color: black;'>¿Quieres ver tu Carrito de Compra?</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Ver mi Carrito de Compra</h1>", unsafe_allow_html=True)
 
 'Tu producto para ojos elegido:'
 
