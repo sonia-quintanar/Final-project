@@ -42,8 +42,8 @@ st.dataframe(marca_precio_elegido)
 
 st.markdown("<h1 style='text-align: center; color: black;'>Mi pedido</h1>", unsafe_allow_html=True)
 # Ojos:
-#image = Image.open('images/imagen_ojos.jpg')
-#st.image (image,use_column_width=True)
+image = Image.open('images/imagen_ojos.jpg')
+st.image (image,use_column_width=True)
 
 st.write(
 """
@@ -59,8 +59,8 @@ ojos = st.selectbox(
 
 
 # Facial:
-image = Image.open('images/imagen_facial1.jpg')
-st.image (image)
+image = Image.open('images/imagen_facial.jpg')
+st.image (image,use_column_width=True)
 
 st.write(
 """
@@ -76,8 +76,8 @@ cara = st.selectbox(
 
 
 # Corporal:
-image = Image.open('images/imagen_corporal1.jpg')
-st.image (image,use_column_center=True)
+image = Image.open('images/imagen_corporal.jpg')
+st.image (image,use_column_width=True)
 
 st.write(
 """
