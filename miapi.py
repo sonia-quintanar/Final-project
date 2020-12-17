@@ -42,8 +42,8 @@ st.dataframe(marca_precio_elegido)
 
 st.markdown("<h1 style='text-align: center; color: black;'>Mi pedido</h1>", unsafe_allow_html=True)
 # Ojos:
-image = Image.open('images/imagen_ojos.jpg')
-st.image (image,use_column_width=True)
+#image = Image.open('images/imagen_ojos.jpg')
+#st.image (image,use_column_width=True)
 
 st.write(
 """
@@ -95,8 +95,8 @@ corporal = st.selectbox(
 
 st.markdown("<h1 style='text-align: center; color: black;'>Carrito de compra</h1>", unsafe_allow_html=True)
 
-image = Image.open('images/imagen_carrito1.jpg')
-st.image (image)
+image = Image.open('images/imagen_carrito.jpg')
+st.image (image,use_column_width=True)
 
 'Tu producto de ojos elegido es:', ojos
 
