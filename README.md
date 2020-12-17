@@ -1,4 +1,4 @@
-# Productos de Dermocosmética Primor
+# Productos de Dermocosmética
 
 ![imagen_primor](https://github.com/sonia-quintanar/Final-project/blob/main/images/imagen_primor.jpg)
 
@@ -6,9 +6,7 @@
 
 En este proyecto hemos obtenido los productos de la sección de dermocosmética de la página web de Primor con Web Scraping.
 
-"""
 
-"""
 
 ![imagen_primor](https://github.com/sonia-quintanar/Final-project/blob/main/images/productos_dermocosmetica.png)
 
