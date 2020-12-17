@@ -118,5 +118,5 @@ st.dataframe(cara_elegida)
 corporal_elegida = corporal_seleccionada(corporal)
 st.dataframe(corporal_elegida)
 
-image = Image.open('images/imagen_carrito.jpg')
+image = Image.open('images/imagen_compra.jpg')
 st.image (image,use_column_width=True)
