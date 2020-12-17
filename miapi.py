@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 from tools.getdata import data, listadodemarcas, marca_seleccionada, listadodeprecios, precio_seleccionado, marca_precio, data_ojos, listadodeojos, ojos_seleccionada, data_cara, listadodecara, cara_seleccionada, data_corporal, listadodecorporal, corporal_seleccionada
 
-st.markdown("<h1 style='text-align: center; color: black;'>¿Cómo encontrar mi producto con el precio más bajo?</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>¿Qué productos de dermocosmética vende Primor?</h1>", unsafe_allow_html=True)
 
 image = Image.open('images/imagen_primor.jpg')
 st.image (image,use_column_width=True)
@@ -13,10 +13,14 @@ En este proyecto extraemos con Web Scraping los productos de la sección de Derm
 Alojamos los datos obtenidos en MySQL:
 """
 )
+st.markdown("<h1 style='text-align: center; color: black;'>Productos</h1>", unsafe_allow_html=True)
 
 st.dataframe(data)
 
 #selectbox para elegir marca:
+
+st.markdown("<h1 style='text-align: center; color: black;'>Marcas</h1>", unsafe_allow_html=True)
+
 #image = Image.open('images/imagen_marcas1.jpg')
 #st.image (image,use_column_width=True)
 
@@ -40,17 +44,17 @@ marca_precio_elegido = marca_precio (marca, precio)
 st.dataframe(marca_precio_elegido)
 
 
-st.markdown("<h1 style='text-align: center; color: black;'>Mi pedido</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>¿Realizamos un pedido? Compra los productos para tu Ojos, Cara y Cuerpo.</h1>", unsafe_allow_html=True)
 # Ojos:
-image = Image.open('images/imagen_ojos.jpg')
-st.image (image,use_column_width=True)
 
 st.write(
 """
-Los productos para mi ojos son:
+- Los productos para tus ojos son:
 """
 )
 
+image = Image.open('images/imagen_facial1.jpg')
+st.image (image,use_column_width=True)
 st.dataframe(data_ojos)
 
 ojos = st.selectbox(
@@ -59,14 +63,15 @@ ojos = st.selectbox(
 
 
 # Facial:
-image = Image.open('images/imagen_facial.jpg')
-st.image (image,use_column_width=True)
 
 st.write(
 """
-Los productos para mi cara son:
+- Los productos para tu cara son:
 """
 )
+
+image = Image.open('images/imagen_facial.jpg')
+st.image (image,use_column_width=True)
 
 st.dataframe(data_cara)
 
@@ -76,14 +81,15 @@ cara = st.selectbox(
 
 
 # Corporal:
-image = Image.open('images/imagen_corporal.jpg')
-st.image (image,use_column_width=True)
 
 st.write(
 """
-Los productos corporales son:
+- Tus productos corporales son:
 """
 )
+
+image = Image.open('images/imagen_corporal.jpg')
+st.image (image,use_column_width=True)
 
 st.dataframe(data_corporal)
 
@@ -93,25 +99,24 @@ corporal = st.selectbox(
 
 # Carrito de compra:
 
-st.markdown("<h1 style='text-align: center; color: black;'>Carrito de compra</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>¿Quieres ver tu Carrito de Compra?</h1>", unsafe_allow_html=True)
 
-image = Image.open('images/imagen_carrito.jpg')
-st.image (image,use_column_width=True)
-
-'Tu producto de ojos elegido es:', ojos
+'Tu producto de ojos elegido:'
 
 ojos_elegida = ojos_seleccionada(ojos)
 st.dataframe(ojos_elegida)
 
 
-'Tu producto de cara elegido es:', cara
+'Tu producto de cara elegido:'
 
 cara_elegida = cara_seleccionada(cara)
 st.dataframe(cara_elegida)
 
 
-'Tu producto corporal elegido es:', corporal
+'Tu producto corporal elegido:'
 
 corporal_elegida = corporal_seleccionada(corporal)
 st.dataframe(corporal_elegida)
 
+image = Image.open('images/imagen_carrito.jpg')
+st.image (image,use_column_width=True)
