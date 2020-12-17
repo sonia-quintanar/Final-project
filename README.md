@@ -7,7 +7,6 @@
 En este proyecto hemos obtenido los productos de la sección de dermocosmética de la página web de Primor con Web Scraping.
 
 
-
 ![imagen_primor](https://github.com/sonia-quintanar/Final-project/blob/main/images/productos_dermocosmetica.png)
 
 Hemos obtenido la marca, el nombre y el precio de todas las páginas generando así un DataFrame que hemos exportado para importarlo posteriormente en una base de datos MySQL.
@@ -20,8 +19,13 @@ La información que hemos solicitado se ha basado en la siguiente estructura:
 
 - Obtener todos los productos y precios de una marca elegida.
 - Filtrar los productos de la marca elegida anteriormente que tengan un precio menor a un precio elegido.
+
+![imagen_primor](https://github.com/sonia-quintanar/Final-project/blob/main/images/filtro_marca_precio.png)
+
 - Seleccionar todos los productos cosméticos para el cuidado de ojos, faciales y corporales.
 - Mostrar la selección anterior de productos para realizar una compra.
+
+![imagen_primor](https://github.com/sonia-quintanar/Final-project/blob/main/images/carrito.png)
 
 # Mejoras del proyecto para realizar en un futuro:
 

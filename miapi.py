@@ -101,7 +101,7 @@ corporal = st.selectbox(
 
 st.markdown("<h1 style='text-align: center; color: black;'>¿Quieres ver tu Carrito de Compra?</h1>", unsafe_allow_html=True)
 
-'Tu producto de ojos elegido:'
+'Tu producto para ojos elegido:'
 
 ojos_elegida = ojos_seleccionada(ojos)
 st.dataframe(ojos_elegida)
