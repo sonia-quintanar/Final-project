@@ -17,8 +17,8 @@ Alojamos los datos obtenidos en MySQL:
 st.dataframe(data)
 
 #selectbox para elegir marca:
-image = Image.open('images/imagen_marcas.jpg')
-st.image (image,use_column_width=True)
+#image = Image.open('images/imagen_marcas1.jpg')
+#st.image (image,use_column_width=True)
 
 marca = st.selectbox(
     'Elige una marca:',
@@ -59,8 +59,8 @@ ojos = st.selectbox(
 
 
 # Facial:
-image = Image.open('images/imagen_facial.jpg')
-st.image (image,use_column_width=True)
+image = Image.open('images/imagen_facial1.jpg')
+st.image (image)
 
 st.write(
 """
@@ -76,8 +76,8 @@ cara = st.selectbox(
 
 
 # Corporal:
-image = Image.open('images/imagen_corporal.jpg')
-st.image (image,use_column_width=True)
+image = Image.open('images/imagen_corporal1.jpg')
+st.image (image,use_column_center=True)
 
 st.write(
 """
@@ -95,8 +95,8 @@ corporal = st.selectbox(
 
 st.markdown("<h1 style='text-align: center; color: black;'>Carrito de compra</h1>", unsafe_allow_html=True)
 
-image = Image.open('images/imagen_carrito.jpg')
-st.image (image,use_column_width=True)
+image = Image.open('images/imagen_carrito1.jpg')
+st.image (image)
 
 'Tu producto de ojos elegido es:', ojos
 
