@@ -27,7 +27,7 @@ La información que hemos solicitado se ha basado en la siguiente estructura:
 
 ![imagen_primor](https://github.com/sonia-quintanar/Final-project/blob/main/images/carrito.png)
 
-# Mejoras del proyecto para realizar en un futuro:
+# Próximos pasos del proyecto:
 
 Obtener todos los datos de productos de dermocosmética de otras tiendas especializadas, de supermercados y de páginas de venta online con el objetivo de mostrar los precios de un mismo producto y poder compararlos.
 
