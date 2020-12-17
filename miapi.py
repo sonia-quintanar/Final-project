@@ -76,8 +76,8 @@ cara = st.selectbox(
 
 
 # Corporal:
-#image = Image.open('images/imagen_corporal.jpeg')
-#st.image (image,use_column_width=True)
+image = Image.open('images/imagen_corporal.jpg')
+st.image (image,use_column_width=True)
 
 st.write(
 """
