@@ -35,5 +35,5 @@ Así podremos saber el precio más bajo de un mismo producto y la tienda donde c
 
 El objetivo es conseguir un comparador de precios de productos (en tiendas físicas (especializadas o supermercados) y tiendas online para obtener siempre el precio más bajo de un producto elegido.
 
-# Enlace a la presentación del proyecto realizada:
+# Enlace a la presentación realizada del proyecto:
 https://docs.google.com/presentation/d/1YWokl0ffQ26eGZN55T5LLBXBAbiLJI3W2NINLTnJpbY/edit#slide=id.gc6f80d1ff_0_0
