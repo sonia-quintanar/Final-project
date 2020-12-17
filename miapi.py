@@ -8,9 +8,9 @@ image = Image.open('images/imagen_primor.jpg')
 st.image (image,use_column_width=True)
 st.write(
 """
-En este proyecto extraemos con Web Scraping los productos de la sección de Dermocosmética dentro de Parafarmacia de la página de [Primor.](https://www.primor.eu/66-dermocosmetica) 
+En este proyecto extraemos con Web Scraping los productos de la sección de Dermocosmética de la página de [Primor.](https://www.primor.eu/66-dermocosmetica) 
 
-Alojamos los datos obtenidos en MySQL:
+Alojamos los datos obtenidos en una base de datos MySQL:
 """
 )
 st.markdown("<h1 style='text-align: center; color: black;'>Productos</h1>", unsafe_allow_html=True)
@@ -35,7 +35,7 @@ st.dataframe(marca_elegida)
 
 #selectbox para elegir precio < X €:
 precio = st.selectbox(
-    'Elige un precio (en €):',
+    'Elige un precio máximo (en €):',
      listadodeprecios(data))
 'Estos son los productos de la marca', marca, 'con un precio inferior a', precio,'€ ordenados de menor a mayor precio:'
 
@@ -44,7 +44,7 @@ marca_precio_elegido = marca_precio (marca, precio)
 st.dataframe(marca_precio_elegido)
 
 
-st.markdown("<h1 style='text-align: center; color: black;'>¿Realizamos un pedido? Compra los productos para tu Ojos, Cara y Cuerpo.</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>¿Realizamos un pedido? Comprar los productos para tu Ojos, Cara y Cuerpo.</h1>", unsafe_allow_html=True)
 # Ojos:
 
 st.write(
@@ -118,5 +118,5 @@ st.dataframe(cara_elegida)
 corporal_elegida = corporal_seleccionada(corporal)
 st.dataframe(corporal_elegida)
 
-image = Image.open('images/imagen_compra1.jpg')
+image = Image.open('images/imagen_compra.jpg')
 st.image (image,use_column_width=True)
